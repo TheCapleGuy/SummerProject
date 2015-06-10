@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AttackObjectManager.cs" />
      <Compile Include="Assets\Scripts\DeathTimer.cs" />
      <Compile Include="Assets\Scripts\MoveSetManager.cs" />
-     <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\VanillaMoves.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

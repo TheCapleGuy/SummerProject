@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveSetManager : MonoBehaviour
 {
-    public float speed = 6.0F;
+    public float speedMax = 10f;
     public float jumpSpeed;
     public float gravity;
     private float moveSpeed;
@@ -29,9 +29,14 @@ public class MoveSetManager : MonoBehaviour
         moveSpeed = 0;
 
         //joystick input for movement left and right
-        moveSpeed = speed * Input.GetAxis("Horizontal");
+        moveSpeed = Input.GetAxis("Horizontal");
 
         //apply moveSpeed to the characters location
-        rBody.velocity = new Vector2(moveSpeed, rBody.velocity.y);
+        //keep the velocity below or equal to speedMax
+        rBody.velocity += new Vector2(moveSpeed, 0);
+        if (rBody.velocity.x > speedMax)
+            rBody.velocity = new Vector2(speedMax, rBody.velocity.y);
+        else if (rBody.velocity.x < -speedMax)
+            rBody.velocity = new Vector2(-speedMax, rBody.velocity.y);
     }
 }
