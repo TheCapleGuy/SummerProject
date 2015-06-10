@@ -1,0 +1,14 @@
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.dll
+C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.pdb
