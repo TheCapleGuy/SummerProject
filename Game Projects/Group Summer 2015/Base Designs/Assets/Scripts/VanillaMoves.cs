@@ -5,7 +5,7 @@ public class VanillaMoves : MoveSetManager {
 
     //rockwall used on dodge function
     public GameObject rockWall;
-    private float dodgeRespawnTimer = 0;
+    private float dodgeRespawnTimer = 10;
     public int dodgeDelay;
     private float dodgeInstanceTimer = 0;
     public int dodgeInstanceLife;

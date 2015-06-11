@@ -1,27 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackObjectManager : MonoBehaviour {
+public class AttackObjectManager : MonoBehaviour
+{
     private float dodgeDeathTimer = 0;
     public int dodgeLife;
-    private GameObject dodgeObject;
     public GameObject player;
-    private Rigidbody2D pBody;
     private Vector3 dodgePosition;
-	// Use this for initialization
-	void Start () 
+    private float tParam = 0;
+    private Vector2 lerpStart;
+    // Use this for initialization
+    void Start()
     {
-        //dodgeTransform = transform;
-        dodgeObject = this.gameObject;
-        pBody = player.GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        //dodgeTransform = transform;    
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        DeathTimer(dodgeObject);
+        DeathTimer(this.gameObject);
         //MoveObject();
-	}
+    }
 
     public void DeathTimer(GameObject gObject)
     {
@@ -44,7 +43,14 @@ public class AttackObjectManager : MonoBehaviour {
         //object it is connected too....
         //dodgePosition.x += Mathf.Lerp(transform.position.x, pBody.position.x, Time.deltaTime);
         dodgePosition = transform.position;
-        dodgePosition += new Vector3(pBody.position.x,pBody.position.y,0);
+        //lerpStart = dodgePosition;
+        //dodgePosition += new Vector3(pBody.position.x,pBody.position.y,0);
+        if (tParam < 1)
+        {
+            tParam += 1 * Time.deltaTime;
+            dodgePosition.x += Mathf.Lerp(dodgePosition.x, player.transform.position.x, tParam);
+            Debug.Log("Player position: " + player.transform.position.x);
+        }
         transform.position = dodgePosition;
     }
 }

@@ -12,3 +12,5 @@ C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\De
 C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\Temp\bin\Debug\Unity.CecilTools.dll
 C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.dll
 C:\Users\Adrian\Desktop\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Adrian\Documents\GitHub\SummerProject\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Adrian\Documents\GitHub\SummerProject\Game Projects\Group Summer 2015\Base Designs\obj\Debug\Assembly-CSharp.dll

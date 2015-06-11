@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AttackObjectManager.cs" />
-     <Compile Include="Assets\Scripts\DeathTimer.cs" />
      <Compile Include="Assets\Scripts\MoveSetManager.cs" />
      <Compile Include="Assets\Scripts\VanillaMoves.cs" />
  <Reference Include="UnityEngine.UI">
