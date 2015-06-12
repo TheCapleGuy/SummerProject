@@ -18,8 +18,8 @@ public class AttackObjectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DeathTimer(this.gameObject);
-        //MoveObject();
+        //DeathTimer(this.gameObject);
+        MoveObject();
     }
 
     public void DeathTimer(GameObject gObject)
@@ -41,6 +41,15 @@ public class AttackObjectManager : MonoBehaviour
     {
         //how the fuck do i get prefabs with no rigidBody to follow an
         //object it is connected too....
+        /*
+         * First of all you are setting your public player variable in the editor with a prefab. You don't instantiate a new player with it,
+         * you seem to be trying to call the player INSTANCE that is in your scene when you load it.  It's just like a class isn't an object you can manipulate,
+         * it's a blueprint for an object, you have to instantiate the class and assign it to a variable and then you can call functions on it.
+         * So, you either grab a handle on the player on your scene at run-time using findobject methods (expensive if not needed) or you hook up your public variable 
+         * with the gameobject instance in your scene.
+         */
+
+
         //dodgePosition.x += Mathf.Lerp(transform.position.x, pBody.position.x, Time.deltaTime);
         dodgePosition = transform.position;
         //lerpStart = dodgePosition;
@@ -48,7 +57,8 @@ public class AttackObjectManager : MonoBehaviour
         if (tParam < 1)
         {
             tParam += 1 * Time.deltaTime;
-            dodgePosition.x += Mathf.Lerp(dodgePosition.x, player.transform.position.x, tParam);
+            //you were adding the result instead of just assigning it.
+            dodgePosition.x = Mathf.Lerp(dodgePosition.x, player.transform.position.x, tParam);
             Debug.Log("Player position: " + player.transform.position.x);
         }
         transform.position = dodgePosition;
