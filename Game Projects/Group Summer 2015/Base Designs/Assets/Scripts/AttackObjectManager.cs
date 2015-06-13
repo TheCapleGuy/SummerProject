@@ -53,7 +53,7 @@ public class AttackObjectManager : MonoBehaviour
         {
             tParam += 1 * Time.deltaTime;
             dodgePosition.x += Mathf.Lerp(dodgePosition.x, player.transform.position.x, tParam);
-            //Debug.Log("Player position: " + player.transform.position.x);
+            // Debug.Log("Player position: " + player.transform.position.x);
         }
         transform.position = dodgePosition;
     }
