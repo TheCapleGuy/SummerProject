@@ -6,20 +6,24 @@ public class AttackObjectManager : MonoBehaviour
     private float dodgeDeathTimer = 0;
     public int dodgeLife;
     public GameObject player;
+    private Rigidbody2D pRigidBody;
     private Vector3 dodgePosition;
     private float tParam = 0;
     private Vector2 lerpStart;
     // Use this for initialization
     void Start()
     {
-        //dodgeTransform = transform;    
+        //dodgeTransform = transform;
+        pRigidBody = player.GetComponent<Rigidbody2D>();
+        Debug.Log("RigidBody x: " + pRigidBody.transform.position.x);
+        Debug.Log("gameObject x: " + player.transform.position.x);
     }
 
     // Update is called once per frame
     void Update()
     {
         DeathTimer(this.gameObject);
-        //MoveObject();
+        MoveObject();
     }
 
     public void DeathTimer(GameObject gObject)
@@ -49,7 +53,7 @@ public class AttackObjectManager : MonoBehaviour
         {
             tParam += 1 * Time.deltaTime;
             dodgePosition.x += Mathf.Lerp(dodgePosition.x, player.transform.position.x, tParam);
-            Debug.Log("Player position: " + player.transform.position.x);
+            //Debug.Log("Player position: " + player.transform.position.x);
         }
         transform.position = dodgePosition;
     }
