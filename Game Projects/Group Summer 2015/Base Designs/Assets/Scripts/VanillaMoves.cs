@@ -29,7 +29,7 @@ public class VanillaMoves : MoveSetManager {
         Activate();
 
         //Using default Controller Input
-        base.Movement();
+        Movement();
         
 	}
 
@@ -58,6 +58,7 @@ public class VanillaMoves : MoveSetManager {
         {
             dodgeInstanceTimer = 0;
             Instantiate(rockWall, new Vector2(rBody.position.x, rBody.position.y), Quaternion.identity);
+            rockWall.GetComponent<AttackObjectManager>().player = gameObject;
         }    
     }
 }
