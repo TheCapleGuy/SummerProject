@@ -6,15 +6,18 @@ public class MoveSetManager : MonoBehaviour
     public float speedMax = 10f;
     public float jumpSpeed;
     public float gravity;
-    private float moveSpeed;
+    protected float xDirection;
+    protected float yDirection;
     public Rigidbody2D rBody;
     public virtual void Activate(){}
 
     public virtual void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
+        xDirection = Input.GetAxis("Horizontal");
+        yDirection = Input.GetAxis("Vertical");
     }
-
+    //functions to be overloaded per character
     public virtual void MeleeAttack(){}
     public virtual void HeavyAttack(){}
     public virtual void Dodge(){}
@@ -22,18 +25,22 @@ public class MoveSetManager : MonoBehaviour
     {
         rBody.velocity = new Vector2(rBody.velocity.x, jumpSpeed);
     }
-
+    //function to apply effect on player
+    public void KnockBack(Vector2 knockBackForce)
+    {
+        rBody.AddForce(knockBackForce);
+    }
     public void Movement()
     {
         //reset moveSpeed to stop character
-        moveSpeed = 0;
+        xDirection = 0;
 
         //joystick input for movement left and right
-        moveSpeed = Input.GetAxis("Horizontal");
+        xDirection = Input.GetAxis("Horizontal");
 
         //apply moveSpeed to the characters location
         //keep the velocity below or equal to speedMax
-        rBody.velocity += new Vector2(moveSpeed, 0);
+        rBody.velocity += new Vector2(xDirection, 0);
         if (rBody.velocity.x > speedMax)
             rBody.velocity = new Vector2(speedMax, rBody.velocity.y);
         else if (rBody.velocity.x < -speedMax)
