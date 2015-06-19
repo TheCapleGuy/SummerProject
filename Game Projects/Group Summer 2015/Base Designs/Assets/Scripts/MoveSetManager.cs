@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MoveSetManager : MonoBehaviour
 {
-    public float speedMax = 10f;
+    public float speedMax = 2f;
+    private bool isGrounded;
     public float jumpSpeed;
     public float gravity;
     protected float xDirection;
@@ -28,6 +29,7 @@ public class MoveSetManager : MonoBehaviour
     //function to apply effect on player
     public void KnockBack(Vector2 knockBackForce)
     {
+        Debug.Log("KnockBack!");
         rBody.AddForce(knockBackForce);
     }
     public void Movement()
@@ -45,5 +47,11 @@ public class MoveSetManager : MonoBehaviour
             rBody.velocity = new Vector2(speedMax, rBody.velocity.y);
         else if (rBody.velocity.x < -speedMax)
             rBody.velocity = new Vector2(-speedMax, rBody.velocity.y);
+    }
+
+    public virtual void Update()
+    {
+        Movement();
+
     }
 }

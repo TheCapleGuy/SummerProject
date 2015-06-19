@@ -19,7 +19,7 @@ public class VanillaMoves : MoveSetManager {
 	}
 	
 	// Update is called once per frame
-	public void Update () 
+	public override void Update () 
     {
         //adjusting time on the timers 
 
@@ -31,7 +31,7 @@ public class VanillaMoves : MoveSetManager {
         Activate();
 
         //Using default Controller Input
-        Movement();
+        base.Update();
         
 	}
 
@@ -62,6 +62,7 @@ public class VanillaMoves : MoveSetManager {
         {
             dodgeInstanceTimer = 0;
             Instantiate(rockWall, new Vector2(rBody.position.x, rBody.position.y), Quaternion.identity);
+            rockWall.GetComponent<AttackObjectManager>().player = gameObject;
             
         }    
     }
